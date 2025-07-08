@@ -2,25 +2,23 @@
 <html>
 	<head>
 		<title>Interest Calculator</title>
-    <link rel="stylesheet" href="styles.css"/>
+		<link rel="stylesheet" href="styles.css"/>
 	</head>
 	<body>
 		<main class="content">
 			<div class="container">
-				<h1>
-					Interest Calculator
-				</h1>
+				<h1>Interest Calculator</h1>
 				<section id="inputs">
 					<span>Principal Amount</span>
-					<input id="pa" type="number" placeholder="Must be positive"/>
-					<br/>
+					<input id="pa" type="number" placeholder="Must be positive" oninput="calcFutureAmount()"/>
+					<p id="pa-warning" class="invisible">Please enter a positive number.</p>
 
 					<span>Interest Rate (%)</span>
-					<input id="ir" type="number" step="0.1"/>
-					<br/>
+					<input id="ir" type="number" step="0.1" oninput="calcFutureAmount()"/>
+					<p id="ir-warning" class="invisible">Please enter a valid interest rate.</p>
 
 					<span>Compounded</span>
-					<select id="c">
+					<select id="c" onchange="calcFutureAmount()">
 						<option value="1">Annually/Yearly</option>
 						<option value="2">Semi-Annually</option>
 						<option value="4">Quarterly</option>
@@ -30,20 +28,19 @@
 					</select>
 					<br/>
 
-					<span>Time (in years)</span>
-					<input id="t" type="number" step="1"/>
-					<br/>
+					<span>Time (in Years)</span>
+					<input id="t" type="number" step="1" oninput="calcFutureAmount()"/>
+					<p id="t-warning" class="invisible">Please enter a valid time</p>
 
+					<!--
 					<button id="calc-btn" onclick="calcFutureAmount()">
 						Calculate
 					</button>
-					<br/>
+					-->
 
-					<div>
-						Future Amount: <span id="future-amount"></span>
-					</div>
-					<div>
-						Interest Gained: <span id="interest-gained"></span>
+					<div id="results">
+						<div>Future Amount: <span id="future-amount"></span></div>
+						<div>Interest Gained: <span id="interest-gained"></span></div>
 					</div>
 				</section>
 			</div>
@@ -51,7 +48,7 @@
 		<footer class="footer">
 			<p>&copy; 2025 Joshua Aniken Acusta. All rights reserved.</p>
 		</footer>
-    <script src="script.js"></script>
+    	<script src="script.js"></script>
 	</body>
 </html>
 

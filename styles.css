@@ -43,6 +43,11 @@ body {
   color: #2c3e50;
 }
 
+/* Visibility */
+.invisible {
+  visibility: hidden;
+}
+
 /* Section for inputs */
 #inputs span {
   display: block;
@@ -78,13 +83,6 @@ body {
   background-color: #2980b9;
 }
 
-/* Output styling */
-#inputs div {
-  margin-top: 1em;
-  font-size: 1.1em;
-  color: #2d3436;
-}
-
 /* Responsive adjustments */
 @media (max-width: 600px) {
   .container {
@@ -94,6 +92,18 @@ body {
   #calc-btn {
     font-size: 1em;
   }
+}
+
+/* Output styling */
+#results {
+  display: flex;
+  justify-content: space-evenly;
+}
+
+#results div {
+  margin-top: 1em;
+  font-size: 1.1em;
+  color: #2d3436;
 }
 
 #future-amount,
@@ -111,9 +121,3 @@ body {
   border-top: 1px solid #ddd;
   background-color: #f9f9f9;
 }
-
-
-
-
-
-
