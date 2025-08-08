@@ -23,7 +23,7 @@ Check it out through this link: [https://nekina.github.io/interest-calculator/](
    git clone https://github.com/Nekina/interest-calculator.git
    cd interest-calculator
 2. Open the application:
-- Simply open ==index.html== in your preferred web browser
+- Simply open <mark>index.html</mark> in your preferred web browser
 - Or serve it locally (optional), for example:
    ```bash
    # Using Python 3
